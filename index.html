@@ -9,11 +9,12 @@
 
     <link rel="stylesheet" href="styles/home.css">
 
-    <script src="scripts/getdate.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+
 
 </head>
 <body>
@@ -24,9 +25,9 @@
     </header>
 
     <!-- Navigation Section -->
-
+    <button class="menu-toggle">&#9776;</button>
     <nav>
-        <ul>
+        <ul class="nav-links">
             <li><a href="">Home</a></li>
             <li><a href="">Chamber</a></li>
             <li><a href="">Github Profile</a></li>
@@ -82,5 +83,9 @@
     <h3>©2024 🗿 Tomas Contreras 🗿 Chile</h3>
     <p>Last modification: ${lastModifiedDate}</p>
 </footer>
+
+<script src="scripts/getdate.js" defer></script>
+<script src="menu.js"></script>
+
 </body>
 </html>

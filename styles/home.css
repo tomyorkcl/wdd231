@@ -214,3 +214,37 @@ nav ul li a:hover {
     transform: scale(1.1); 
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    section img {
+        margin: 0 auto;
+        display: block;
+    }
+}
