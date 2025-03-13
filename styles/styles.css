@@ -1,61 +1,216 @@
-.introduce {
-    background-color: #3d5a80;
-    padding: 30px;
-    justify-content: center;
-    text-align: center;
-    color: #e0fbfc;
-}
-
-nav{
-    text-align: center;
-    justify-content: center;
+* {
     margin: 0;
-    padding: 5px;
-    display: flex;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-ul {
-    display: flex;
-    list-style-type: none;
+header {
+    background-color: #29465b;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-family: "Roboto", sans-serif;
 }
 
-li{
-    padding: 10px;
+header p {
+    color: gold;
+    margin: 10px;
+}
 
+/* Navigation section */
+nav {
+    font-family: "calibri";
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    padding: 1px;   
+    font-family: "Roboto", sans-serif;
+    
+}
+
+nav li {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 a {
     text-decoration: none;
-
+    color: #f4f4f4;
 }
 
-.course-box {
-    background-color: #f4f4f4;  /* Fondo gris claro */
-    padding: 20px;              /* Espaciado dentro de la caja */
-    border-radius: 8px;         /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-    width: 300px;               /* Ancho de la caja */
-    margin: 0 auto;             /* Centrado horizontal */
+/* Main content layout */
+main {
+    font-family: "calibri";
+    display: grid;
+    grid-template-columns: 600px 300px;
+    gap: 20px;                    
+    justify-content: center;
+    margin: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
-.course-box ul {
-    padding: 0;
+/* Section layout within main */
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-left: 10px;
 }
 
-.course-box li {
-    margin: 10px 0;             /* Espacio entre los elementos de la lista */
+main section h2 {
+    text-align: center;
+    color: #f4f4f4;
+    background-color: #29465b;
+    margin-bottom: 15px;        
+    padding: 10px;
+    grid-row: 1;
+    grid-column: 1;
+    border-radius: 8px;
 }
 
-h3 {
-    background-color: #3d5a80;
+/* Section text styling */
+main section p {       
+    color: #333;
+    grid-row: 2;
+    margin-left: 10px;
+}
+
+/* Image within the section "About me" */
+main section img {
+    grid-row: 2;
+    grid-column: 2;
+    max-width: 200px;
+    margin-left: 100px;
+    border-radius: 8px;
+}
+
+/* Aside section "web dev resources" */
+main aside {
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    
+}
+
+main aside h2 {
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #f4f4f4;
+    background-color: #29465b;
+    margin-bottom: 15px;
+}
+
+/* Links inside the aside */
+main aside a {
+    color: #333;
+    margin-top: 10px;
+    display: flex;
     text-align: center;
 }
 
-.box-chile {
-    background-color: #f4f4f4;  /* Fondo gris claro */
-    padding: 20px;              /* Espaciado dentro de la caja */
-    border-radius: 8px;         /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-    width: 300px;               /* Ancho de la caja */
-    margin: 0 auto;             /* Centrado horizontal */
+main aside li{
+    margin-left: 30px;
+}
+
+.container {
+    display: grid;
+    grid-column: 1/5;
+    height: auto;
+    width: 90%;
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.header {
+    background-color: #29465b;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.course {
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+}
+
+.course.cse, .course.wdd {
+    background-color: #440e0e;
+    color: white;
+}
+
+.course.inactive {
+    background-color: #E8E8E8;
+    color: #666;
+}
+
+/* Footer section */
+footer {
+    font-family: "calibri";
+    text-align: center;
+    background-color: #29465b;
+    color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    font-size: 20px; 
+    transform: scale(1.1); 
+    cursor: pointer;
 }
