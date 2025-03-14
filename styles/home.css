@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,9 +24,15 @@ nav {
     display: flex;
     background-color: #333;
     justify-content: center;
-    padding: 1px;   
+    padding: 1px;
     font-family: "Roboto", sans-serif;
-    
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -45,7 +52,7 @@ main {
     font-family: "calibri";
     display: grid;
     grid-template-columns: 600px 300px;
-    gap: 20px;                    
+    gap: 20px;
     justify-content: center;
     margin: 20px;
     font-family: "Roboto", sans-serif;
@@ -54,7 +61,7 @@ main {
 /* Section layout within main */
 main section {
     display: grid;
-    grid-template-columns: 1fr 1fr;  
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     margin: 10px;
     padding: 20px;
@@ -68,7 +75,7 @@ main section h2 {
     text-align: center;
     color: #f4f4f4;
     background-color: #29465b;
-    margin-bottom: 15px;        
+    margin-bottom: 15px;
     padding: 10px;
     grid-row: 1;
     grid-column: 1;
@@ -76,7 +83,7 @@ main section h2 {
 }
 
 /* Section text styling */
-main section p {       
+main section p {
     color: #333;
     grid-row: 2;
     margin-left: 10px;
@@ -100,7 +107,6 @@ main aside {
     border: 1px solid #333;
     font-family: "Roboto", sans-serif;
     align-items: center;
-    
 }
 
 main aside h2 {
@@ -120,7 +126,7 @@ main aside a {
     text-align: center;
 }
 
-main aside li{
+main aside li {
     margin-left: 30px;
 }
 
@@ -210,33 +216,51 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    font-size: 20px; 
-    transform: scale(1.1); 
+    font-size: 20px;
+    transform: scale(1.1);
     cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
     }
 
-    .nav-links {
+    nav {
         display: none;
+    }
+
+    nav ul {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
         padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    nav.active {
+        display: flex;
     }
 
     main {
@@ -247,4 +271,5 @@ nav ul li a:hover {
         margin: 0 auto;
         display: block;
     }
+
 }
