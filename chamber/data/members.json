@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Tech Solutions",
+      "address": "123 Innovation St, Santiago",
+      "phone": "+56 9 1234 5678",
+      "website": "https://techsolutions.com",
+      "image": "lion-logo.png",
+      "membership": 3,
+      "description": "Leading provider of tech solutions."
+    },
+    {
+      "name": "Green Energy",
+      "address": "456 Solar Ave, Santiago",
+      "phone": "+56 9 2345 6789",
+      "website": "https://greenenergy.com",
+      "image": "green-logo.png",
+      "membership": 2,
+      "description": "Renewable energy company focused on sustainability."
+    },
+    {
+      "name": "Fast Logistics",
+      "address": "789 Speed Ln, Santiago",
+      "phone": "+56 9 3456 7890",
+      "website": "https://fastlogistics.com",
+      "image": "labour-logo.png",
+      "membership": 1,
+      "description": "Efficient logistics and transportation services."
+    },
+    {
+      "name": "Marketing Pro",
+      "address": "987 Branding Blvd, Santiago",
+      "phone": "+56 9 8765 4321",
+      "website": "https://marketingpro.com",
+      "image": "rocket-logo.png",
+      "membership": 2,
+      "description": "Innovative marketing solutions for businesses."
+    },
+    {
+      "name": "Security Experts",
+      "address": "654 Safe St, Santiago",
+      "phone": "+56 9 5432 1098",
+      "website": "https://securityexperts.com",
+      "image": "security-logo.png",
+      "membership": 3,
+      "description": "Providing top-tier security services."
+    },
+    {
+      "name": "CloudTech",
+      "address": "321 Data Dr, Santiago",
+      "phone": "+56 9 2109 8765",
+      "website": "https://cloudtech.com",
+      "image": "cloud-logo.png",
+      "membership": 1,
+      "description": "Cloud computing and storage solutions."
+    },
+    {
+      "name": "Smart Finances",
+      "address": "159 Budget Rd, Santiago",
+      "phone": "+56 9 6789 1234",
+      "website": "https://smartfinances.com",
+      "image": "finances-logo.png",
+      "membership": 3,
+      "description": "Financial planning and investment management."
+    }
+  ]
