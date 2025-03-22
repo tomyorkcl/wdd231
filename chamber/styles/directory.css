@@ -79,7 +79,7 @@ footer {
   margin-bottom: 0;
 }
 
-footer section {
+footer div {
   flex: 1;
   padding: 10px;
   min-width: 200px;
