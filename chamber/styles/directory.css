@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --primary-color: #1e4b8f;  /* Blue */
-  --secondary-color: black;  /* Black */
+  --primary-color: #023047;  /* Blue */
+  --secondary-color: #219ebc;  /* Black */
   --tertiary-color: white;   /* White */
   --neutral-color: #f9f9f9;  /* Light Gray */
+  --web-color: #ffb703; /* Gold */
+  --web-hove: #fb8500; /* Orange */
 }
 
 * {
@@ -12,6 +14,11 @@
   margin: 0;
   padding: 0;
 
+}
+
+body {
+  margin: 0;
+  padding-bottom: 180px; /* Ajusta según la altura del footer */
 }
 
 h3 {
@@ -39,6 +46,12 @@ h3 {
   justify-content: center;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .nav-links a {
   text-decoration: none;
   align-content: center;
@@ -49,9 +62,10 @@ h3 {
   margin-left: 15px;
 }
 
+
 .nav-links a:hover {
   color: var(--tertiary-color);
-  background-color: var(--primary-color); 
+  background-color: var(--secondary-color); 
   border-radius: 8px;
   transform: scale(1.1);
 }
@@ -65,30 +79,48 @@ header {
   display: flex;
   justify-content: space-between; 
   align-items: center; 
-  background-color: var(--secondary-color); 
+  background-color: var(--primary-color); 
 }
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: var(--tertiary-color);
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 0;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Asegúrate de definir una altura */
+
 }
 
 footer div {
-  flex: 1;
+
   padding: 10px;
   min-width: 200px;
   text-align: left;
+
 }
 
-.contact, .class, .reserved {
+.contact, .classs, .reserved {
   border: none;
   background-color: transparent;
+}
+
+.reserved p {
+  text-align: center;
+  justify-content: center;
+}
+
+.reserved a {
+  text-align: center;
+  justify-content: center;
 }
 
 h2 {
@@ -112,8 +144,16 @@ a, p {
   justify-content: center;
 }
 
+.member-card a {
+  color: #ffb703;
+}
+
+.member-card a:hover{
+  color: #fb8500;
+}
+
 .member-card {
-  background: var(--secondary-color);
+  background: #219ebc;
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -166,3 +206,4 @@ a, p {
 #toggle-view:hover {
   background-color: var(--primary-color);
 }
+

@@ -49,6 +49,9 @@
   
     footer {
       padding: 40px;
+      height: 80px;
+      flex-direction: row; /* Mantiene la distribución en pantallas grandes */
+      justify-content: space-between;
     }
   
     header {
