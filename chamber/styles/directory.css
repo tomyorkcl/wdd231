@@ -95,15 +95,14 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 80px; /* Asegúrate de definir una altura */
 
 }
 
 footer div {
-
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
-  min-width: 200px;
   text-align: left;
 
 }
@@ -207,3 +206,51 @@ a, p {
   background-color: var(--primary-color);
 }
 
+.hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--primary-color)
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
