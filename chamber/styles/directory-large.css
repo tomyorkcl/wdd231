@@ -156,8 +156,4 @@
       align-items: flex-start;
       gap: 20px;
     }
-  #spotlight-container {
-    flex-direction: column;
-    align-items: center;
-    }
   }
