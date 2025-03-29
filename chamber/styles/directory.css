@@ -95,7 +95,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 80px; /* Asegúrate de definir una altura */
+  height: 80px; 
 
 }
 
@@ -111,6 +111,7 @@ footer div {
   border: none;
   background-color: transparent;
 }
+
 
 .reserved p {
   text-align: center;

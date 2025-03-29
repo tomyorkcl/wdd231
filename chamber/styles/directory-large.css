@@ -81,7 +81,7 @@
   }
 
 
-  @media  (max-height: 500px) and (orientation: landscape){
+  @media (max-width: 768px){
     .about p {
       margin-left: 100px;
       margin-right: 100px;
