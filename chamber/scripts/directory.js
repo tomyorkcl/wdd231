@@ -1,9 +1,8 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navigation = document.querySelector('.navigation');
-    
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('#nav-links');  // Cambié '.nav-links' por '#nav-links'
+
 menuToggle.addEventListener('click', () => {
-  navigation.classList.toggle('open');
-  menuToggle.classList.toggle('open');
+  navLinks.classList.toggle('active');
 });
 
 //Last modification //

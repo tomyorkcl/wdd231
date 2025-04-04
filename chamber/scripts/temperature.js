@@ -4,32 +4,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     const country = "CL"; 
 
     try {
-        // Get data from weather
         const weatherRes = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=${apiKey}`);
         const weatherData = await weatherRes.json();
 
-        // Show weather
+        const currentWeather = weatherData.list[0];
         document.getElementById("weather").innerHTML = `
             <h3>Weather in ${city}</h3>
-            <p><strong>Temperature:</strong> ${weatherData.list[0].main.temp}°C</p>
-            <p><strong>Description:</strong> ${weatherData.list[0].weather[0].description}</p>
+            <p><strong>Temperature:</strong> ${currentWeather.main.temp}°C</p>
+            <p><strong>Description:</strong> ${currentWeather.weather[0].description}</p>
         `;
+
+        let forecastHTML = '<h3>3-Day Forecast</h3>';
+        for (let i = 0; i < 3; i++) {
+            const day = weatherData.list[i * 8];
+            forecastHTML += `
+                <p><strong>Day ${i + 1}:</strong> ${day.main.temp}°C, ${day.weather[0].description}</p>
+            `;
+        }
+        document.getElementById("forecast").innerHTML = forecastHTML;
     } catch (error) {
         console.error("Error obtaining weather:", error);
     }
 
-    // Data members
     const members = [
-        { name: "Tech Solutions", membership: "Gold", phone: "1234", website: "https://tech.com", image: "lion-logo.png" },
-        { name: "Green Energy", membership: "Silver", phone: "5678", website: "https://green.com", image: "green-logo.png" },
-        { name: "Fast Logistics", membership: "Gold", phone: "9101", website: "https://fast.com", image: "labour-logo.png" },
-        { name: "Marketing Pro", membership: "Gold", phone: "1234", website: "https://tech.com", image: "rocket-logo.png" },
-        { name: "Security Experts", membership: "Silver", phone: "5678", website: "https://green.com", image: "security-logo.png" },
-        { name: "CloudTech", membership: "Gold", phone: "9101", website: "https://fast.com", image: "cloud-logo.png" },
-        { name: "Smart Finances", membership: "Gold", phone: "9101", website: "https://fast.com", image: "finances-logo.png" }
+        { name: "Tech Solutions", membership: "Gold", phone: "1234", address: "123 Tech St.", website: "https://tech.com", image: "lion-logo.png" },
+        { name: "Green Energy", membership: "Silver", phone: "5678", address: "456 Green Ave.", website: "https://green.com", image: "green-logo.png" },
+        { name: "Fast Logistics", membership: "Gold", phone: "9101", address: "789 Speed Rd.", website: "https://fast.com", image: "labour-logo.png" },
+        { name: "Marketing Pro", membership: "Gold", phone: "1234", address: "123 Ad St.", website: "https://marketing.com", image: "rocket-logo.png" },
+        { name: "Security Experts", membership: "Silver", phone: "5678", address: "321 Safe St.", website: "https://security.com", image: "security-logo.png" },
+        { name: "CloudTech", membership: "Gold", phone: "9101", address: "654 Cloud Dr.", website: "https://cloudtech.com", image: "cloud-logo.png" },
+        { name: "Smart Finances", membership: "Gold", phone: "9101", address: "987 Finance Blvd.", website: "https://finances.com", image: "finances-logo.png" }
     ];
 
-    // show 2 or 3 members randomnly
     const spotlight = members.filter(m => m.membership === "Gold" || m.membership === "Silver")
                              .sort(() => 0.5 - Math.random())
                              .slice(0, 2 + Math.floor(Math.random() * 2));
@@ -39,7 +45,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             <img src="images/${member.image}" alt="${member.name}">
             <h3>${member.name}</h3>
             <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Visit site</a></p>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p class="membership-level"><strong>Membership:</strong> ${member.membership}</p>
         </div>
     `).join("");
 });
