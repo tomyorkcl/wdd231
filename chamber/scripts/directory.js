@@ -60,3 +60,33 @@ document.querySelector("#toggle-view").addEventListener("click", function () {
       this.textContent = "Switch to List View";
   }
 });
+
+
+// Modals section
+document.getElementById("timestamp").value = new Date().toISOString();
+
+function showModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+
+
+
+function saveFormData(event) {
+  event.preventDefault(); 
+
+  // Save data in sessionStorage
+  sessionStorage.setItem('fname', document.getElementById('fname').value);
+  sessionStorage.setItem('lname', document.getElementById('lname').value);
+  sessionStorage.setItem('email', document.getElementById('email').value);
+  sessionStorage.setItem('phone', document.getElementById('phone').value);
+  sessionStorage.setItem('org', document.getElementById('org').value);
+  sessionStorage.setItem('membership', document.querySelector('select[name="membership"]').value);
+  sessionStorage.setItem('description', document.querySelector('textarea[name="description"]').value);
+
+  window.location.href = 'thankyou.html';
+}

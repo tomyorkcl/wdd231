@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thank You</title>
+
+  <meta name="author" content="Tomas Contreras">
+  <meta name="description" content="Confirmation page after submitting the membership form.">
+
+  <link rel="icon" href="images/chamber-icon.ico">
+
+  <meta property="og:title" content="Thank You - Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tomyorkcl.github.io/wdd231/chamber/images/logo.png">
+  <meta property="og:url" content="https://tomyorkcl.github.io/wdd231/chamber/thankyou.html">
+
+  <link rel="stylesheet" href="styles/directory.css">
+  <link rel="stylesheet" href="styles/directory-large.css">
+
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Chamber Logo">
+  </div>
+  <div class="menu-toggle" id="toggle-view">
+    &#9776; <!-- Hamburger icon -->
+  </div>
+  <nav class="navigation">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="thankyou">
+  <h1>Thank You for Joining!</h1>
+  <p>We’ve received your application. Here's what you submitted:</p>
+  <ul>
+    <li><strong>First Name:</strong> <span id="out-fname"></span></li>
+    <li><strong>Last Name:</strong> <span id="out-lname"></span></li>
+    <li><strong>Email:</strong> <span id="out-email"></span></li>
+    <li><strong>Phone:</strong> <span id="out-phone"></span></li>
+    <li><strong>Organization:</strong> <span id="out-org"></span></li>
+    <li><strong>Membership Level:</strong> <span id="out-membership"></span></li>
+    <li><strong>Organization Description:</strong> <span id="out-description"></span></li>
+    <li><strong>Submitted On:</strong> <span id="out-time"></span></li>
+
+  </ul>
+</main>
+
+<footer>
+  <div class="contact">
+    <h2>York Chamber of Commerce</h2>
+    <a>The Morros 9218</a>
+    <a>Santiago, The Cisterna</a>
+    <a>yorkcommerce@commerce.cl</a>
+    <a>+56 9 3366 8959</a>
+  </div>
+
+  <div class="reserved">
+    <p>&copy; 2025 York Chamber of Commerce, All rights reserved.</p>
+    <p>Last modification: <span id="last-modified"></span></p>
+  </div>
+
+  <div class="classs">
+    <h2>WDD 231 Class Project</h2>
+    <a>Tomas Contreras - BYU Student</a>
+  </div>
+</footer>
+
+<script>
+
+// Get form data from sessionStorage
+document.getElementById("out-fname").textContent = sessionStorage.getItem("fname");
+document.getElementById("out-lname").textContent = sessionStorage.getItem("lname");
+document.getElementById("out-email").textContent = sessionStorage.getItem("email");
+document.getElementById("out-phone").textContent = sessionStorage.getItem("phone");
+document.getElementById("out-membership").textContent = sessionStorage.getItem("membership");
+document.getElementById("out-description").textContent = sessionStorage.getItem("description");
+document.getElementById("out-org").textContent = sessionStorage.getItem("org");
+document.getElementById("out-time").textContent = new Date().toLocaleString();
+
+</script>
+
+</body>
+</html>
