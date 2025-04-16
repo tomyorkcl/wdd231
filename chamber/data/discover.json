@@ -1,0 +1,50 @@
+[
+    {
+      "name": "National Historical Museum",
+      "address": "Plaza de Armas 951, Santiago, Chile",
+      "description": "This museum offers an in-depth view of Chile's history, from pre-Columbian times to the present, with a rich collection of historical artifacts.",
+      "image": "images/museum.jpg"
+    },
+    {
+      "name": "Metropolitan Park of Santiago",
+      "address": "Cerro San Cristóbal, Santiago, Chile",
+      "description": "A natural space ideal for hiking, cycling, and picnicking, with stunning views of the city and the Andes Mountains.",
+      "image": "images/cerro.jpg"
+    },
+    {
+      "name": "La Moneda Palace",
+      "address": "Plaza de la Constitución 1, Santiago, Chile",
+      "description": "The seat of the Chilean government and an important historical monument that hosts events and official ceremonies. Visitors can learn about the country's politics and history.",
+      "image": "images/lamoneda.jpg"
+    },
+    {
+      "name": "Paseo Ahumada",
+      "address": "Calle Ahumada, Santiago, Chile",
+      "description": "A bustling open-air shopping center in the heart of Santiago, filled with shops, restaurants, and a rich urban culture.",
+      "image": "images/ahumada.jpeg"
+    },
+    {
+      "name": "Central Market",
+      "address": "Calle San Pablo 967, Santiago, Chile",
+      "description": "A traditional market where visitors can enjoy the freshest seafood and experience local Chilean culture in a vibrant atmosphere.",
+      "image": "images/mercado.jpeg"
+    },
+    {
+      "name": "Bellavista Neighborhood",
+      "address": "Bellavista, Santiago, Chile",
+      "description": "Santiago's bohemian neighborhood, known for its nightlife, street art, and a wide variety of restaurants and bars. It's a popular spot to enjoy local culture.",
+      "image": "images/bellavista.jpeg"
+    },
+    {
+      "name": "Santa Lucia Hill",
+      "address": "Av. O'Higgins 1, Santiago, Chile",
+      "description": "A park and hill in downtown Santiago, famous for its panoramic views of the city and its history, featuring monuments and trails to explore.",
+      "image": "images/luciahill.jpg"
+    },
+    {
+      "name": "Municipal Theatre of Santiago",
+      "address": "Agustinas 1030, Santiago, Chile",
+      "description": "The city's main theater, offering a cultural program of opera, ballet, and classical music, considered one of the country's top artistic venues.",
+      "image": "images/teatro.jpeg"
+    }
+  ]
